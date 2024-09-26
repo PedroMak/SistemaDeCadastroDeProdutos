@@ -2,7 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox as mb
 from telaDeCadastro import *
-import telaDeUpdate
+from telaDeMostrar import *
+from telaDeUpdate import *
 from DataBase import *
 
 def menuPrincipal():
@@ -25,7 +26,7 @@ def menuPrincipal():
 
     # Botão de mostrar produtos
     buttonMostrar = tk.Button(root, text="Mostrar Produtos")
-    buttonMostrar['command'] = mostrarBanco
+    buttonMostrar['command'] = mostrarBanco #TODO: mudar para TelaDeMostrar após testes
     buttonMostrar.place(x = 100, y = 300) 
 
     # Configuração pra janela sempre abrir
