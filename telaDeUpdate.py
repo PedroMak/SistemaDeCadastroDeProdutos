@@ -43,5 +43,3 @@ def telaDeUpdate():
     root.update()
     root.deiconify()
     root.mainloop()
-
-telaDeUpdate()

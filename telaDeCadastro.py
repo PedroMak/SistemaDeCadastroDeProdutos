@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox as mb
+from DataBase import *
 
 def telaDeCadastro():
     root = tk.Tk()
@@ -18,15 +19,21 @@ def telaDeCadastro():
     labelQuantidade = tk.Label(root, text = "Quantidade no Estoque")
     labelQuantidade.place(x = 100, y = 300)
 
-    #Parte das entrys
     entryNome = tk.Entry(root)
+    #entryNome.bind(lambda x:textoEntradaNome.set(entryNome.get()+x.char))
     entryNome.place(x = 100, y = 120)
+
     entryPreco = tk.Entry(root)
     entryPreco.place(x = 100, y = 220)
+
     entryQuantidade = tk.Entry(root)
     entryQuantidade.place(x = 100, y = 320)
 
-    
+    # Parte dos botões
+    buttonCommit = tk.Button(root, text="Cadastrar")
+    buttonCommit['command'] = lambda: insertIntoDB(entryNome.get(), float(entryPreco.get()), int(entryQuantidade.get()))
+    buttonCommit.place(x = 100, y = 360)
+
     root.iconify()
     root.update()
     root.deiconify()
