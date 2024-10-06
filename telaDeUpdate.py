@@ -21,7 +21,7 @@ def telaDeUpdate():
     #buscaButton['comand'] =
     buscaButton.place(x = 100, y = 145)
 
-    labelAtualiza = tk.Label(root, text = "Atualizar Produto")
+    labelAtualiza = tk.Label(root, text = "Atualizar Estoque")
     labelAtualiza.place(x = 100, y = 250)
     
     intQtdEntrada = tk.IntVar()

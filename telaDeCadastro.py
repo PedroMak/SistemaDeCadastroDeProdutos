@@ -36,7 +36,7 @@ def telaDeCadastro():
 
     # Parte dos botões
     buttonCommit = tk.Button(root, text="Cadastrar")
-    buttonCommit['command'] = lambda: insertIntoDB(entryNome.get(), float(entryPreco.get()), int(entryQuantidade.get()))
+    buttonCommit['command'] = lambda: insertIntoDB(entryNome.get(), float(entryPreco.get()), int(entryQuantidade.get()), int(entryCodigo.get()))
     buttonCommit.place(x = 100, y = 315)
 
     root.iconify()
