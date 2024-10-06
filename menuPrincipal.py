@@ -21,7 +21,7 @@ def menuPrincipal():
 
     # Botão de atualizar
     buttonAtualizar = tk.Button(root, text="Atualizar Produtos")
-    #buttonMostrar['command']
+    buttonAtualizar['command'] = telaDeUpdate
     buttonAtualizar.place(x = 100, y = 200)
 
     # Botão de mostrar produtos
