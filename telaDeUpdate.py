@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox as mb
 from DataBase import *
+from telaProdutoBuscado import *
 
 def telaDeUpdate():
     root = tk.Tk()
@@ -19,7 +20,7 @@ def telaDeUpdate():
 
     
     buscaButton = tk.Button(root, text = "Pesquisar")
-    buscaButton['command'] = lambda: buscarProduto(entradaBusca.get())
+    buscaButton['command'] = produtoBuscado #TODO:lambda: buscarProduto(entradaBusca.get())   <--- isso aqui ta assim pra não esquecer como tava antes.
     buscaButton.place(x = 100, y = 145)
 
     labelAtualiza = tk.Label(root, text = "Atualizar Estoque")
@@ -29,6 +30,7 @@ def telaDeUpdate():
     atualizaBox = tk.Entry(root)
     atualizaBox.place(x = 100, y = 275)
 
+    #TODO: comando para atualizar a quantidade no estoque
     atualizaButton = tk.Button(root, text= "Atualizar")
     #atualizaButton['comand'] =
     atualizaButton.place(x = 100 ,y = 295)
