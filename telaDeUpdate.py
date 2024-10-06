@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox as mb
+from DataBase import *
 
 def telaDeUpdate():
     root = tk.Tk()
@@ -18,7 +19,7 @@ def telaDeUpdate():
 
     
     buscaButton = tk.Button(root, text = "Pesquisar")
-    #buscaButton['comand'] =
+    buscaButton['command'] = lambda: buscarProduto(entradaBusca.get())
     buscaButton.place(x = 100, y = 145)
 
     labelAtualiza = tk.Label(root, text = "Atualizar Estoque")

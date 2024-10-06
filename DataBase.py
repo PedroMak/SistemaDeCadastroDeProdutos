@@ -17,3 +17,9 @@ def mostrarBanco():
     print(lista)
     return lista
     
+def buscarProduto(codigoBarra):
+    nome = cursor.execute("SELECT nome FROM Produtos WHERE codigo LIKE '" + str(codigoBarra) + "'").fetchone()
+    print(nome)
+    return nome
+
+# def atualizarBanco():
