@@ -15,8 +15,8 @@ A princípio era um exercício que foi passando em sala de aula na faculdade que
 
 # Imagens do Programa
 
-![menuPrincipal](assets\menuPrincipal.png)
-![telaDeUpdate](assets\telaDeUpdate.png)
-![telaDeCadastro](assets\telaDeCadastro.png)
-![interfaceBancoDeDados](assets\interfaceBancoDeDados.png)
-![telaBuscaDeProduto](assets\telaBuscaDeProduto.png)
+![menuPrincipal](https://github.com/PedroMak/SistemaDeCadastroDeProdutos/blob/master/assets/interfaceBancoDeDados.png)
+![telaDeUpdate](https://github.com/PedroMak/SistemaDeCadastroDeProdutos/blob/master/assets/telaDeUpdate.png)
+![telaDeCadastro](https://github.com/PedroMak/SistemaDeCadastroDeProdutos/blob/master/assets/telaDeCadastro.png)
+![interfaceBancoDeDados](https://github.com/PedroMak/SistemaDeCadastroDeProdutos/blob/master/assets/interfaceBancoDeDados.png)
+![telaBuscaDeProduto](https://github.com/PedroMak/SistemaDeCadastroDeProdutos/blob/master/assets/telaBuscaDeProduto.png)
