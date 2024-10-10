@@ -13,10 +13,8 @@ def telaDeUpdate():
     labelBusca = tk.Label(root, text = "Buscar Produto")
     labelBusca.place(x = 100, y = 100)
 
-    intEntrada = tk.IntVar()
     entradaBusca = tk.Entry(root)
     entradaBusca.place(x = 100, y = 125)
-    #entradaBusca.bind('<Key>', lambda x:)
 
     
     buscaButton = tk.Button(root, text = "Pesquisar")
@@ -26,21 +24,24 @@ def telaDeUpdate():
     labelAtualiza = tk.Label(root, text = "Atualizar Estoque")
     labelAtualiza.place(x = 100, y = 250)
     
-    intQtdEntrada = tk.IntVar()
+    # Entry de codigo para atualizar
+    labelCodigoParaAtualizar = tk.Label(root, text = "Código:")
+    labelCodigoParaAtualizar.place(x = 50, y = 275)
+
+    codigoDoProdutoParaAtualizar = tk.Entry(root)
+    codigoDoProdutoParaAtualizar.place(x = 100, y =275)
+    
+    # Entry de qt para atualizar
+    labelQtdAtualizar = tk.Label(root, text = "Quantidade:")
+    labelQtdAtualizar.place(x = 25, y = 300)
+    
     atualizaBox = tk.Entry(root)
-    atualizaBox.place(x = 100, y = 275)
+    atualizaBox.place(x = 100, y = 300)
 
     #TODO: comando para atualizar a quantidade no estoque
     atualizaButton = tk.Button(root, text= "Atualizar")
-    #atualizaButton['comand'] =
-    atualizaButton.place(x = 100 ,y = 295)
-
-    # label id   
-    # caixinha de digita ID
-    # botao de buscar ID
-    # telinha aqui que mostra as info do ID buscado  
-    # caixa pra mudar a qtd.
-    # botao de mudar quantidade
+    atualizaButton['command'] = lambda : atualizarBanco(codigoDoProdutoParaAtualizar.get(), atualizaBox.get())
+    atualizaButton.place(x = 100 ,y = 325)
 
     root.iconify()
     root.update()

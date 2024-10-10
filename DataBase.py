@@ -21,5 +21,6 @@ def buscarProduto(codigoBarra):
     print(nomeEQuantidade)
     return nomeEQuantidade
 
-#def atualizarBanco():
-    
+def atualizarBanco(codigo, qtd):
+    cursor.execute("UPDATE Produtos SET qto = '" + str(qtd) + "' WHERE codigo LIKE '" + str(codigo) + "'").fetchone()
+    connection.commit()
