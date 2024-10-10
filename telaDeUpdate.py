@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox as mb
 from DataBase import *
-from telaProdutoBuscado import *
 
 def telaDeUpdate():
     root = tk.Tk()
@@ -15,11 +14,13 @@ def telaDeUpdate():
 
     entradaBusca = tk.Entry(root)
     entradaBusca.place(x = 100, y = 125)
-
     
     buscaButton = tk.Button(root, text = "Pesquisar")
-    buscaButton['command'] = lambda :produtoBuscado(entradaBusca.get())
+    buscaButton['command'] = lambda :addLabel(buscarProduto(entradaBusca.get()), root)
     buscaButton.place(x = 100, y = 150)
+    
+    quadradoBranco = tk.Canvas(root, width = 150, height = 20, bg="white")
+    quadradoBranco.place(x = 100, y = 190)
 
     labelAtualiza = tk.Label(root, text = "Atualizar Estoque")
     labelAtualiza.place(x = 100, y = 250)
@@ -38,7 +39,6 @@ def telaDeUpdate():
     atualizaBox = tk.Entry(root)
     atualizaBox.place(x = 100, y = 300)
 
-    #TODO: comando para atualizar a quantidade no estoque
     atualizaButton = tk.Button(root, text= "Atualizar")
     atualizaButton['command'] = lambda : atualizarBanco(codigoDoProdutoParaAtualizar.get(), atualizaBox.get())
     atualizaButton.place(x = 100 ,y = 325)
@@ -47,3 +47,20 @@ def telaDeUpdate():
     root.update()
     root.deiconify()
     root.mainloop()
+
+#TODO: consertar isso aqui
+def addLabel(tupla, root):
+    # transforma o var em um StrinVar do TK
+    #var = tk.StringVar()
+    
+    #combina Strings com .join mas nossa tupla tem string e int, dai não ta funcionando
+    #varCombinado = " ".join(map(str,tupla))
+
+    # na documentação ta escrito que tem que dar set com StringVar entao aqui nois ia dar o set com a tupla combinada em 1 só string
+    #var.set(varCombinado)
+
+    # Aparentemente pra isso aqui ficar dinâmico tem que usar textvariable no lugar de text, mas a gente não tem certeza
+    newLabel = tk.Label(root, text=tupla)
+    newLabel.place(x = 100, y = 190)
+
+

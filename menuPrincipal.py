@@ -13,7 +13,6 @@ def menuPrincipal():
     root.resizable(False, False)
     root.geometry("300x500")
     
-
     # Botão de cadastro
     buttonCadastro = tk.Button(root, text="Cadastrar Produto")
     buttonCadastro['command'] = telaDeCadastro
