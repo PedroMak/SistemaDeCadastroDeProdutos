@@ -20,8 +20,8 @@ def telaDeUpdate():
 
     
     buscaButton = tk.Button(root, text = "Pesquisar")
-    buscaButton['command'] = produtoBuscado #TODO:lambda: buscarProduto(entradaBusca.get())   <--- isso aqui ta assim pra não esquecer como tava antes.
-    buscaButton.place(x = 100, y = 145)
+    buscaButton['command'] = lambda :produtoBuscado(entradaBusca.get())
+    buscaButton.place(x = 100, y = 150)
 
     labelAtualiza = tk.Label(root, text = "Atualizar Estoque")
     labelAtualiza.place(x = 100, y = 250)
